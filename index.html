@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7f5">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Một món quà nhỏ · 20/10">
+  <meta property="og:description" content="Một tấm thiệp 20/10 dịu dàng, gửi đến người đặc biệt.">
+  <meta property="og:type" content="website">
+  <meta name="description" content="Một tấm thiệp 20/10 dịu dàng, gửi đến người đặc biệt.">
+  <title>Một món quà nhỏ · 20/10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==========================================================================
+       TOÀN BỘ CHỮ, ẢNH, NHẠC CỦA THIỆP ĐỀU SỬA Ở FILE NÀY. File js/script.js
+       chỉ làm hiệu ứng, KHÔNG ghi đè bất kỳ chữ nào. Tìm các chú thích "SỬA:".
+       ========================================================================== -->
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div id="petal-layer" aria-hidden="true"></div>
+  <div id="sparkle-layer" aria-hidden="true"></div>
+
+  <main>
+    <section class="intro" id="intro" aria-label="Mở thiệp">
+      <div class="intro-flower flower-left" aria-hidden="true">✿</div>
+      <div class="intro-flower flower-right" aria-hidden="true">❀</div>
+      <!-- SỬA: màn hình phong thư (trước khi mở thiệp) -->
+      <p class="eyebrow">MỘT MÓN QUÀ NHỎ DÀNH CHO NGƯỜI ĐẶC BIỆT</p>
+      <div class="envelope-wrap">
+        <div class="envelope-glow"></div>
+        <div class="envelope" id="envelope" aria-hidden="true">
+          <div class="envelope-back"></div>
+          <div class="letter-peek"><span>20</span><small>tháng 10</small></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-seal">♡</div>
+        </div>
+      </div>
+      <h1 class="intro-title">Một điều dịu dàng<br><em>đang chờ đón</em></h1>
+      <p class="intro-copy">Có một lời chúc nhỏ đang chờ được gửi trao…</p>
+      <button class="open-button" id="open-card" type="button">
+        <span>Chạm để mở thiệp</span><span class="button-sparkle" aria-hidden="true">✧</span>
+      </button>
+      <p class="sound-note"><span class="sound-dot"></span> Hãy bật âm lượng để cảm nhận món quà</p>
+    </section>
+
+    <section class="card-scene is-hidden" id="card-scene" aria-label="Thiệp chúc mừng 20 tháng 10">
+      <header class="page-heading">
+        <!-- SỬA: phần đầu trang sau khi mở thiệp -->
+        <p class="eyebrow">NGÀY 20 THÁNG 10 · YÊU THƯƠNG</p>
+        <h2 id="scene-title" tabindex="-1">Chúc mừng ngày <em>20 · 10</em></h2>
+        <p class="heading-subtitle">Một chút hoa, một chút nắng, và thật nhiều yêu thương.</p>
+      </header>
+
+      <article class="greeting-card" id="greeting-card">
+        <div class="card-decoration corner-top-left" aria-hidden="true">❀</div>
+        <div class="card-decoration corner-top-right" aria-hidden="true">✿</div>
+        <div class="card-decoration corner-bottom-left" aria-hidden="true">✿</div>
+        <div class="card-decoration corner-bottom-right" aria-hidden="true">❀</div>
+
+        <section class="message-panel">
+          <div class="mini-flower" aria-hidden="true"><span>✿</span><i></i></div>
+          <!-- SỬA: tên người nhận (dòng nhỏ) và tiêu đề lời chúc. Dùng <br> để xuống dòng, <em>...</em> cho chữ viết tay -->
+          <p class="panel-kicker">GỬI NGƯỜI ĐẶC BIỆT</p>
+          <h3 id="message-title">Gửi người phụ nữ<br><em>tuyệt vời</em></h3>
+          <div class="gold-line"><span>✧</span></div>
+          <!-- SỬA: NỘI DUNG LỜI CHÚC. Mỗi <p> là một đoạn, <br> là xuống dòng. Chữ sẽ tự chạy ra từng chữ.
+               data-speed = tốc độ gõ (mili giây mỗi chữ, số nhỏ thì nhanh hơn). -->
+          <div class="sr-only" id="message-source">
+            <p>Chúc chị Thủy sức khỏe dồi dào,<br>
+Ngày ngày vui vẻ, lúc nào cũng tươi.<br>
+Chúc chị buôn bán đắt hàng,<br>
+Khách vào nườm nượp, đơn hàng đầy tay.</p>
+
+<p>Trà sữa thơm ngon khách mê,<br>
+Đồ ăn vặt bán khách về lại mua.<br>
+Làm ăn thuận lợi bốn mùa,<br>
+Tiền vô rủng rỉnh, tha hồ tiêu pha.</p>
+
+<p>Chúc chị may mắn gần xa,<br>
+Cuộc sống sung túc, cả nhà đều vui.<br>
+Có mánh chi cụng nhớ tới cụ nha! 😆</p>
+          </div>
+          <p class="typed-message" id="typed-message" data-speed="42" aria-hidden="true"></p>
+          <!-- SỬA: lời ký (giữ thẻ <span>♡</span> nếu muốn trái tim có màu) -->
+          <p class="signature" id="signature">Thương mến, <span>♡</span></p>
+          <div class="message-footer">HÃY LUÔN RỰC RỠ THEO CÁCH RIÊNG</div>
+        </section>
+
+        <section class="photo-panel" aria-label="Ảnh kỷ niệm">
+          <div class="photo-halo" aria-hidden="true"></div>
+          <!-- SỬA: ĐỔI ẢNH. Có 3 ảnh tự đổi qua lại. Chép ảnh vào thư mục assets/images/ rồi đổi tên file trong src bên dưới
+               (ví dụ src="assets/images/anh-cua-toi.jpg"). Nếu gõ sai tên, thiệp tự dùng ảnh minh hoạ.
+               data-interval = số mili giây giữa hai lần tự đổi ảnh (3000 = 3 giây; 0 = không tự đổi). Muốn thêm/bớt ảnh: thêm hoặc xoá một thẻ <img class="photo-slide"> bên dưới. -->
+          <div class="photo-frame" data-interval="3000">
+            <div class="photo-inner">
+              <img class="photo-slide is-active" id="photo-1" src="assets/images/thuyken.jpg" onerror="this.onerror=null;this.src='assets/images/anh-1.svg'" alt="Ảnh kỷ niệm thứ nhất">
+              <img class="photo-slide" id="photo-2" src="assets/images/thuyken01.jpg" onerror="this.onerror=null;this.src='assets/images/anh-2.svg'" alt="Ảnh kỷ niệm thứ hai">
+              <img class="photo-slide" id="photo-3" src="assets/images/thuyken02.jpg" onerror="this.onerror=null;this.src='assets/images/anh-3.svg'" alt="Ảnh kỷ niệm thứ ba">
+            </div>
+            <div class="photo-dots" id="photo-dots"></div>
+            <p class="photo-caption">♡ Khoảnh khắc thật đẹp ♡</p>
+          </div>
+          <div class="photo-sprig sprig-one" aria-hidden="true">❋</div>
+          <div class="photo-sprig sprig-two" aria-hidden="true">✿</div>
+          <div class="photo-note">thân gửi, với yêu thương</div>
+        </section>
+      </article>
+
+      <div class="closing-line"><span>✧</span> Chúc cuộc sống này luôn nở hoa <span>✧</span></div>
+      <div class="controls" aria-label="Điều khiển thiệp">
+        <!-- SỬA: chữ trên nút nhạc. data-label-on = chữ khi đang phát; data-label-off = chữ khi đang tắt (cũng là chữ lúc đầu) -->
+        <button class="control-button" id="music-toggle" type="button" aria-pressed="false" data-label-on="Tắt nhạc" data-label-off="Bật nhạc"><span class="control-icon">♫</span><span id="music-label">Bật nhạc</span></button>
+        <button class="control-button" id="replay" type="button"><span class="control-icon">↻</span><span>Đọc lại lời chúc</span></button>
+      </div>
+      <p class="footer-note">Được tạo nên bằng một chút yêu thương <span>♡</span></p>
+    </section>
+  </main>
+
+  <!-- SỬA: NHẠC. Đổi tên file trong src nếu dùng bài khác (để trong assets/music/). data-volume = âm lượng từ 0 đến 1 -->
+  <audio id="background-music" src="assets/music/nhac.mp3" data-volume="0.48" preload="auto" loop></audio>
+  <script src="js/script.js"></script>
+</body>
+</html>
